@@ -1,0 +1,11 @@
+{
+  "name": "airport",
+  "version": "1.0.0",
+  "description": "airporst",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akhilesh",
+  "license": "ISC"
+}

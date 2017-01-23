@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Airport Security Suite</title>
+		<!-- Normalize -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<!-- Owl -->
+		<link rel="stylesheet" type="text/css" href="css/owl.css">
+		<!-- Animate.css -->
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+		<!-- Google Fonts -->
+		<link rel="stylesheet" type="text/css" href="css/google-fonts.min.css" >
+		<!-- Elegant Icons -->
+		<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+		<!-- Main style -->
+		<link rel="stylesheet" type="text/css" href="css/cardio.css">
+	</head>
+
+	<body>
+
+		<div class="preloader">
+			<img src="img/loader.gif" alt="Preloader image">
+		</div>
+
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#intro"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right main-nav">
+						<li>
+						<a href="#" style="background-color: transarent;" data-toggle="dropdown">Flight Manifest <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#arrivals">Arrivals</a></li>
+								<li><a href="#departures">Departures</a></li>
+								<li><a href="#transits">Transits</a></li>
+							</ul>
+						</li>
+						<li><a href="#airlines">Airline Manifest</a></li>
+						<li><a href="#passengers" >Passengers</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+
+		<header id="intro">
+			<div class="container">
+				<div class="table">
+					<div class="header-text">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<h1 class="white typed">Airport Security Suite</h1>
+								<h3 class="light white">Flight Manifest</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!--Flight Manifest database-->
+		<!--Arrivals-->
+		<section>
+			<div class="cut cut-top"></div>
+			<div class="container">
+				<div class="row intro-tables">
+					<div class="col-md-12">
+						<div id="table1" class="intro-table intro-table-first">
+							<h5 id="arrivals" class="white heading">Arrivals
+								<span style="padding-right:950px;"></span>
+								<a href="#" data-toggle="modal" data-target="#enterArrival"><i class="material-icons" style="font-size:48px;color:white" >add</i></a> 
+							</h5>
+							<div class="owl-carousel owl-schedule bottom">
+								<div id="flightlistarrival" class="item">
+									<div class="schedule-row row">
+										<div class="col-xs-2">
+											<h5 class="regular white">Airline</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Flight No.</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Origin</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Destination</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Gate</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">ETA</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!--Departures-->
+		<section>
+			<div class="cut cut-top"></div>
+			<div class="container">
+				<div class="row intro-tables">
+					<div class="col-md-12">
+						<div id="table2" style='    background-image: url("img/table-2.jpg");' class="intro-table intro-table-first">
+							<h5 id="departures" class="white heading">Departures
+								<span style="padding-right:920px;"></span>
+								<a href="#" data-toggle="modal" data-target="#enterDepartures"><i class="material-icons" style="font-size:48px;color:white" >add</i></a> 
+							</h5>
+							<div class="owl-carousel owl-schedule bottom">
+								<div id="flightlistdep" class="item">
+									<div class="schedule-row row">
+										<div class="col-xs-2">
+											<h5 class="regular white">Airline</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Flight No.</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Origin</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Destination</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Gate</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">ETD</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!--Transits-->
+		<section>
+			<div class="cut cut-top"></div>
+			<div class="container">
+				<div class="row intro-tables">
+					<div class="col-md-12">
+						<div id="table3" style='    background-image: url("img/table-3.jpg");' class="intro-table intro-table-first">
+							<h5 id="transits" class="white heading">Transit<span style="padding-right:950px;"></span>
+								<a href="#" data-toggle="modal" data-target="#enterTransits"><i class="material-icons" style="font-size:48px;color:white" >add</i></a> 
+							</h5>
+							<div class="owl-carousel owl-schedule bottom">
+								<div id="flightlisttrans" class="item">
+									<div class="schedule-row row">
+										<div class="col-xs-3">
+											<h5 class="regular white">Airline</h5>
+										</div>
+										<div class="col-xs-2">
+											<h5 class="regular white">Flight No.</h5>
+										</div>
+										<div class="col-xs-3">
+											<h5 class="regular white">Origin</h5>
+										</div>
+										<div class="col-xs-3">
+											<h5 class="regular white">Destination</h5>
+										</div>
+										<div class="col-xs-1">
+											<h5 class="regular white">Gate</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End flight manifest-->
+
+
+		<!--Airlines-->
+		<section >
+			<div  class="cut cut-top"></div>
+				<div class="container">
+					<div  class="row intro-tables">
+						<div  class="col-md-12" >
+							<div id="table4" style='background-image: url("img/table-3.jpg");' class="intro-table intro-table-first">
+								<h5 id="airlines" class="white heading">Airlines
+									<span style="padding-right:940px;"></span>
+									<a href="#enterAirlines" data-toggle="modal"><i class="material-icons" style="font-size:48px;color:white" >add</i></a> 
+								</h5>
+								<div  class="owl-carousel owl-schedule bottom">
+									<div id="airlinelist" class="item">
+										<div class="schedule-row row">
+											<div class="col-xs-3">
+												<h5 class="regular white">Airline ID</h5>
+											</div>
+											<div class="col-xs-3">
+												<h5 class="regular white">Airline name</h5>
+											</div>
+											<div class="col-xs-3">
+												<h5 class="regular white">Contact</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--Passengers-->
+		<section>
+			<div class="cut cut-top"></div>
+			<div class="container">
+				<div  class="row intro-tables">
+					<div  class="col-md-12">
+						<div id="table5" style='background-image: url("img/table-2.jpg");' class="intro-table intro-table-first">
+							<h5 id="passengers" class="white heading">Passengers
+								<span style="padding-right:900px;"></span>
+								<a href="#enterPassenger" data-toggle="modal"><i class="material-icons" style="font-size:48px;color:white" >add</i></a> 
+							</h5>
+							<div class="owl-carousel owl-schedule bottom">
+								<div id="passengerdetails" class="item">
+									<div class="schedule-row row">
+										<div class="col-xs-3">
+											<h5 class="regular white">SSID</h5>
+										</div>
+										<div class="col-xs-3">
+											<h5 class="regular white">Passenger name</h5>
+										</div>
+										<div class="col-xs-3">
+											<h5 class="regular white">Flight No.</h5>
+										</div>
+										<div class="col-xs-3">
+											<h5 class="regular white">Flag</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<div  id="enterArrival" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-popup">
+					<a href="#" class="close-link"><i class="icon_close_alt2" onclick="event.preventDefault();$('#enterArrival').modal('hide')"></i></a>
+					<h3 class="white">Enter the detaisl</h3>
+					<form action="insertFlight" class="popup-form" method="post">
+						<input type="text" name="aid" class="form-control form-white" placeholder="Airline ID">
+						<input type="text" name="flight_no" class="form-control form-white" placeholder="Flight No">
+						<input type="text" name="origin" class="form-control form-white" placeholder="Origin">
+						<input type="text" name="eta" class="form-control form-white" placeholder="ETA">
+						<input type="text" name="gate" class="form-control form-white" placeholder="Gate">
+						<button type="submit" class="btn btn-submit" onclick="refresh">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div  id="enterDepartures" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-popup">
+					<a href="#" class="close-link"><i class="icon_close_alt2" onclick="event.preventDefault();$('#enterDepartures').modal('hide')"></i></a>
+					<h3 class="white">Enter the detaisl</h3>
+					<form action="insertFlight" class="popup-form" method="post">
+						<input type="text" name="aid" class="form-control form-white" placeholder="Airline ID">
+						<input type="text" name="flight_no" class="form-control form-white" placeholder="Flight No">
+						<input type="text" name="dest" class="form-control form-white" placeholder="Destination">
+						<input type="text" name="etd" class="form-control form-white" placeholder="ETD">
+						<input type="text" name="gate" class="form-control form-white" placeholder="Gate">
+						<button type="submit" class="btn btn-submit" onclick="refresh">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div  id="enterTransits" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-popup">
+					<a href="#" class="close-link"><i class="icon_close_alt2" onclick="event.preventDefault();$('#enterTransits').modal('hide')"></i></a>
+					<h3 class="white">Enter the detaisl</h3>
+					<form action="insertFlight" class="popup-form" method="post">
+						<input type="text" name="aid" class="form-control form-white" placeholder="Airline ID">
+						<input type="text" name="flight_no" class="form-control form-white" placeholder="Flight No">
+						<input type="text" name="origin" class="form-control form-white" placeholder="Origin">
+						<input type="text" name="dest" class="form-control form-white" placeholder="Destination">
+						<input type="text" name="gate" class="form-control form-white" placeholder="Gate">
+						<button type="submit" class="btn btn-submit" onclick="refresh">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div  id="enterAirlines" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-popup">
+					<a href="#" class="close-link"><i class="icon_close_alt2" onclick="event.preventDefault();$('#enterAirlines').modal('hide')"></i></a>
+					<h3 class="white">Enter the detaisl</h3>
+					<form action="insertAirline" class="popup-form" method="post">
+						<input type="text" name="aid" class="form-control form-white" placeholder="Airline ID">
+						<input type="text" name="name" class="form-control form-white" placeholder="Airlien Name">
+						<input type="text" name="contact" class="form-control form-white" placeholder="Contact No.">
+						<button type="submit" class="btn btn-submit" onclick="history.go(0)">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div  id="enterPassenger" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-popup">
+					<a href="#" class="close-link"><i class="icon_close_alt2" onclick="event.preventDefault();$('#enterPassengerss').modal('hide')"></i></a>
+					<h3 class="white">Enter the detaisl</h3>
+					<form action="insertPassenger" class="popup-form" method="post">
+						<input type="text" name="ssid" class="form-control form-white" placeholder="SSID">
+						<input type="text" name="name" class="form-control form-white" placeholder="NAME">
+						<input type="text" name="flight_no" class="form-control form-white" placeholder="FLIGHT NO">
+						<input type="text" name="nation" class="form-control form-white" placeholder="NATIONALITY">
+						<input type="text" name="visa" class="form-control form-white" placeholder="VISA">
+						<input type="text" name="declarations" class="form-control form-white" placeholder="DECLARATIONS">
+						<button type="submit" class="btn btn-submit" onclick="history.go(0)">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="js/socket.io-1.4.5.js"></script>
+
+
+		<script>
+			var socket = io.connect('http://localhost:3000');
+			function arrival (){
+				//Data for arrivals
+				socket.on('arrival', function(rows) {
+						var list = document.getElementById('flightlistarrival');
+						var table = document.getElementById ('table1');
+						var height = 300;
+						list.innerHTML = '<div class="schedule-row row">\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Airline</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Flight No.</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Origin</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Destination</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Gate</h5>\
+											</div>\
+											<div class="col-xs-2">\
+											<h5 class="regular white">ETA</h5>\
+										</div>\
+										</div>';
+					for (var i = 0; i < rows.length; i++) {
+						list.innerHTML += '	 <div class="schedule-row row">\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].NAME + '</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].FLIGHT_NO +'</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].ORIGIN + '</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">NEW DELHI</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].GATE + '</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].ETA + '</h5>\
+												</div>\
+											</div>'
+											height += 30;
+						// console.log(rows[i].namea);
+					};
+					table.style.height=height.toString()+'px';
+				});
+			}
+			function depart (){
+				//Data for departures
+				socket.on('departures', function(rows) {
+					var list = document.getElementById('flightlistdep');
+					var table = document.getElementById ('table2');
+						var height = 300;
+						list.innerHTML = '<div class="schedule-row row">\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Airline</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Flight No.</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Origin</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Destination</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Gate</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">ETD</h5>\
+											</div>\
+										</div>';
+					for (var i = 0; i < rows.length; i++) {
+						list.innerHTML += '	 <div class="schedule-row row">\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].NAME + '</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].FLIGHT_NO +'</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">NEW DELHI</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].DEST +'</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].GATE + '</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].ETD + '</h5>\
+												</div>\
+											</div>'
+											height +=35;
+						// console.log(rows[i].namea);
+					};
+					table.style.height=height.toString()+'px';
+				});
+			}
+			function transits (){
+				//Data for trasits
+				socket.on('transit', function(rows) {
+					var list = document.getElementById('flightlisttrans');
+					var table = document.getElementById ('table3');
+						var height = 300;
+						list.innerHTML = '<div class="schedule-row row">\
+											<div class="col-xs-3">\
+												<h5 class="regular white">Airline</h5>\
+											</div>\
+											<div class="col-xs-2">\
+												<h5 class="regular white">Flight No.</h5>\
+											</div>\
+											<div class="col-xs-3">\
+												<h5 class="regular white">Origin</h5>\
+											</div>\
+											<div class="col-xs-3">\
+												<h5 class="regular white">Destination</h5>\
+											</div>\
+											<div class="col-xs-1">\
+												<h5 class="regular white">Gate</h5>\
+											</div>\
+										</div>';
+					for (var i = 0; i < rows.length; i++) {
+						list.innerHTML += '	 <div class="schedule-row row">\
+												<div class="col-xs-3">\
+													<h5 class="regular white">' + rows[i].NAME + '</h5>\
+												</div>\
+												<div class="col-xs-2">\
+													<h5 class="regular white">' + rows[i].FLIGHT_NO +'</h5>\
+												</div>\
+												<div class="col-xs-3">\
+													<h5 class="regular white">' + rows[i].ORIGIN + '</h5>\
+												</div>\
+												<div class="col-xs-3">\
+													<h5 class="regular white">' + rows[i].DEST +'</h5>\
+												</div>\
+												<div class="col-xs-1">\
+													<h5 class="regular white">' + rows[i].GATE + '</h5>\
+												</div>\
+											</div>'
+										height += 35;
+						// console.log(rows[i].namea);
+					};
+					table.style.height=height.toString()+'px';
+				});
+			}
+			function airline (){
+				//Data for airlines
+				socket.on('airlinesdetails', function(rows) {
+						var list = document.getElementById('airlinelist');
+						var table = document.getElementById('table4');
+						var height = 300;
+						list.innerHTML = '<div class="schedule-row row">\
+											<div class="col-xs-3">\
+												<h5 class="regular white">Airline ID</h5>\
+											</div>\
+											<div class="col-xs-3">\
+												<h5 class="regular white">Airline Name</h5>\
+											</div>\
+											<div class="col-xs-3">\
+												<h5 id="abc" class="regular white">Contact</h5>\
+											</div>\
+										</div>';
+					for (var i = 0; i <rows.length; i++) {
+						list.innerHTML += '	 <div class="schedule-row row">\
+												<div class="col-xs-3">\
+													<h5 class="regular white">' + rows[i].AID + '</h5>\
+												</div>\
+												<div class="col-xs-3">\
+													<h5 class="regular white">' + rows[i].NAME +'</h5>\
+												</div>\
+												<div class="col-xs-3">\
+													<h5 class="regular white">' + rows[i].CONTACT_NO.toString() + '</h5>\
+												</div>\
+											</div>';
+						// console.log(rows[i].name);
+						height += 45;
+					};
+					table.style.height=height.toString()+'px';
+				});
+			}
+			function passenger (){
+				//Data for passengers
+				socket.on('passengerdetails', function(rows) {
+								var list = document.getElementById('passengerdetails');
+								var table = document.getElementById('table5');
+								var height = 300;
+								list.innerHTML='<div class="schedule-row row">\
+													<div class="col-xs-3">\
+														<h5 class="regular white">SSID</h5>\
+													</div>\
+													<div class="col-xs-3">\
+														<h5 class="regular white">Passenger name</h5>\
+													</div>\
+													<div class="col-xs-3">\
+														<h5 class="regular white">Flight No.</h5>\
+													</div>\
+													<div class="col-xs-3">\
+														<h5 class="regular white">Flag</h5>\
+													</div>\
+												</div>';
+							for (var i = 0; i < rows.length; i++) {
+								list.innerHTML += '	 <div class="schedule-row row">\
+														<div class="col-xs-3">\
+															<h5 class="regular white">' + rows[i].SSID + '</h5>\
+														</div>\
+														<div class="col-xs-3">\
+															<h5 class="regular white">' + rows[i].NAME +'</h5>\
+														</div>\
+														<div class="col-xs-3">\
+															<h5 class="regular white">' + rows[i].FLIGHT_NO + '</h5>\
+														</div>\
+														<div class="col-xs-3">\
+															<h5 id="flag'+i+'" class="regular white">' + rows[i].FLAG + '</h5>\
+														</div>\
+													</div>'
+													document.getElementById('flag'+i).style.color=rows[i].FLAG.toString();
+								height += 35+i;
+								// console.log(rows[i].namea);
+							};
+							table.style.height=height.toString()+'px';
+				});
+			}
+			arrival();
+			depart();
+			transits();
+			airline();
+			passenger();
+		
+		</script>
+
+
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/typewriter.js"></script>
+		<script src="js/jquery.onepagenav.js"></script>
+		<script src="js/main.js"></script>
+
+
+		<script>
+	</body>
+
+</html>
